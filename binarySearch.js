@@ -1,24 +1,27 @@
-var count,item,first = 0,last = key - 1,mid = (first +last) / 2;
-var key = 8;
-var arr = [1,2,3,4,5,6,7,8,9];
+var array = [11, 12, 13, 14, 15, 17, 18, 19];
+BinarySearch(array, 6)
 
-while(first <= last) {
-    if(arr[mid] < item){
-        first = mid + 1;
+function BinarySearch(array, key){
+    var high  = 0, low   = array.length - 1, mid = Math.floor((low + high)/2);
 
+    while(array[mid] != key && high < low)
+    {
+       if (key < array[mid])
+        {
+            low = mid - 1;
+        } 
+      else if (key > array[mid])
+        {
+            high = mid + 1;
+        }
+        mid = Math.floor((low + high)/2);
     }
-    else if(arr[mid] == item) {
-        console.log('Key found');
 
-    }    
-    else {
-        last =mid - 1;
-    }
-
-    mid = (first+last)/2;
-
-    if(first > last) {
-        console.log('Key not found');
-    }
+ if (array[mid] != key)
+ {
+     console.log('key not found');
+ } 
+ else
+ console.log('key found');
 }
 

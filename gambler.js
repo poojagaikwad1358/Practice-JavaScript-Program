@@ -17,11 +17,12 @@ var bets=0,wins=0;
           }
       }
   }
-  var a=100.0 * wins / trials;
-  var b=1.0 * bets / trials;
+  var loss = trials - wins;
+  var a=100* wins / trials;
+  var b=100* loss / trials;
   
   console.log(wins+ ' Wins of ' +trials);
-  console.log('Percentage won: '+a);
-  console.log('Avg of bets = ' + b);
+  console.log('Percentage of won: '+a);
+  console.log('Percentage of loss = ' + b);
 
   
