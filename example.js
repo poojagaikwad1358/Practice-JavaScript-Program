@@ -1,9 +1,6 @@
-/**************************************************/
+
 var myFunc = function outerfunction(){
     var val = 15
-    function inner(){
-    }
-
     function innerTwo(){
         var sampleValue = 20
         var newVal = val + sampleValue
